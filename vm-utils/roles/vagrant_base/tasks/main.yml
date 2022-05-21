@@ -1,0 +1,62 @@
+---
+- name: purge packages
+  ansible.builtin.apt:
+    purge: true
+    autoclean: true
+    autoremove: true
+    state: absent
+    name:
+      - libx11-data
+      - xauth
+      - libxmuu1
+      - libxcb1
+      - libx11-6
+      - libxext6
+      - ppp
+      - pppconfig
+      - pppoeconf
+      - popularity-contest
+      - installation-report
+  become: true
+
+- name: clear machine-id
+  ansible.builtin.copy:
+    dest: /etc/machine-id
+    content: ''
+    force: true
+    mode: preserve
+  become: true
+
+- name: get log files
+  ansible.builtin.find:
+    paths: /var/log
+    recurse: true
+  register: log_files
+  become: true
+
+- name: get tmp files
+  ansible.builtin.find:
+    paths:
+      - /tmp
+      - /var/tmp
+      - /var/cache
+    recurse: true
+  register: tmp_files
+  become: true
+
+- name: clear log files
+  ansible.builtin.copy:
+    dest: "{{ item.path }}"
+    content: ''
+    force: true
+    mode: preserve
+  with_items: "{{ log_files.files }}"
+  become: true
+
+- name: remove tmp files
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items:
+    - "{{ tmp_files.files }}"
+  become: true

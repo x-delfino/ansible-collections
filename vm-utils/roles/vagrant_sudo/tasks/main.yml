@@ -1,0 +1,10 @@
+---
+- name: "{{ 'add ' + username + ' to sudoers' }}"
+  community.general.sudoers:
+    name: "{{ '99_' + username }}"
+    commands: ALL
+    nopassword: true
+    user: "{{ username }}"
+  become: true
+  vars:
+    ansible_become_password: "{{ password }}"

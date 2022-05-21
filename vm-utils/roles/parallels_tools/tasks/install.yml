@@ -1,0 +1,58 @@
+---
+- name: create tmp dir
+  ansible.builtin.tempfile:
+    suffix: install
+    state: directory
+  register: tmp_dir
+
+- name: install linux headers
+  ansible.builtin.apt:
+    name: linux-headers-{{ ansible_kernel }}
+    state: present
+  become: true
+
+- name: mount installer
+  ansible.posix.mount:
+    src: "{{ ansible_user_dir + '/prl-tools-lin-arm.iso' }}"
+    path: "{{ tmp_dir.path }}"
+    state: mounted
+    fstype: iso9660
+  become: true
+
+- name: get version
+  ansible.builtin.slurp:
+    src: "{{ tmp_dir.path + '/version' }}"
+  register: pt_version
+  become: true
+
+- name: print version
+  ansible.builtin.debug:
+    msg: "Parallels Tools Version {{ pt_version.content | b64decode }}"
+  become: true
+
+- name: install
+  ansible.builtin.command:
+    argv:
+      - "{{ tmp_dir.path + '/install' }}"
+      - --install-unattended-with-deps
+  register: install
+  changed_when: install.rc == 0
+  become: true
+
+- name: unmount installer
+  ansible.posix.mount:
+    src: ~/vagrant/prl-tools-lin-arm.iso
+    path: "{{ tmp_dir.path }}"
+    state: absent
+    fstype: iso9660
+  become: true
+
+- name: remove iso
+  ansible.builtin.file:
+    path: ~/prl-tools-lin-arm.iso
+    state: absent
+
+- name: remove tmp_dir
+  ansible.builtin.file:
+    path: "{{ tmp_dir.path }}"
+    state: absent
