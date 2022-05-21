@@ -1,0 +1,44 @@
+---
+- name: create tmp dir for root
+  ansible.builtin.tempfile:
+    suffix: -clean
+    state: file
+  register: root_tmp
+  become: true
+
+- name: whiteout root
+  ansible.builtin.shell:
+    cmd: >
+      dd
+      if=/dev/zero
+      "{{ 'of=' + root_tmp.path }}"
+      bs=1M
+      count=$(($(df --sync -k / --output=avail | tail -n1) - 1));
+      rm
+      -rf
+      "{{ root_tmp.path }}"
+  changed_when: true
+  failed_when: false
+  become: true
+
+- name: create tmp dir for boot
+  ansible.builtin.tempfile:
+    suffix: -clean
+    state: file
+  register: boot_tmp
+  become: true
+
+- name: whiteout boot
+  ansible.builtin.shell:
+    cmd: >
+      dd
+      if=/dev/zero
+      "{{ 'of=' + boot_tmp.path }}"
+      bs=1M
+      count=$(($(df --sync -k /boot --output=avail | tail -n1) - 1));
+      rm
+      -rf
+      "{{ boot_tmp.path }}"
+  changed_when: true
+  failed_when: false
+  become: true

@@ -1,0 +1,7 @@
+---
+- name: upgrade linux image
+  ansible.builtin.apt:
+    name: linux-image-{{ ansible_kernel }}
+    state: latest
+    update_cache: true
+  become: true
