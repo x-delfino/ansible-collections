@@ -1,0 +1,11 @@
+---
+- name: check if installed
+  ansible.builtin.file:
+    state: file
+    path: ~/.oh-my-zsh/oh-my-zsh.sh
+  register: installed
+  failed_when: false
+
+- name: install
+  when: installed.state == "absent"
+  import_tasks: install.yml

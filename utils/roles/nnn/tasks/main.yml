@@ -1,0 +1,10 @@
+---
+- name: check installed
+  ansible.builtin.command: nnn -V
+  failed_when: false
+  changed_when: false
+  register: version
+
+- name: install
+  when: version.rc != 0
+  include_tasks: install.yml

@@ -1,0 +1,11 @@
+---
+- name: check installed
+  ansible.builtin.file:
+    path: "{{ vim_plug_dir + '/plug.vim' }}"
+    state: file
+  register: installed
+  failed_when: false
+
+- name: install
+  when: installed.state != 'file'
+  include_tasks: install.yml

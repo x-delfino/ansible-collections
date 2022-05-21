@@ -1,0 +1,13 @@
+---
+- name: check installed
+  ansible.builtin.file:
+    path: ~/.tmux/plugins/tpm
+    state: file
+  register: installed
+  failed_when: false
+
+- name: install
+  when: installed.state != 'directory'
+  ansible.builtin.git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm

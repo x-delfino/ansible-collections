@@ -1,0 +1,17 @@
+---
+- name: download installer
+  ansible.builtin.get_url:
+    url:
+      https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/ohmyzsh.sh
+    mode: 0744
+
+- name: install
+  ansible.builtin.command: /tmp/ohmyzsh.sh --unattended
+  register: install
+  changed_when: install.rc == 0
+
+- name: remove installer
+  ansible.builtin.file:
+    path: /tmp/ohmyzsh.sh
+    state: absent

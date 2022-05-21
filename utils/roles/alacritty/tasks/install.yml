@@ -1,0 +1,23 @@
+---
+- name: ensure cargo
+  ansible.builtin.command: ~/.cargo/bin/cargo --version
+  changed_when: false
+
+- name: ensure prereqs
+  ansible.builtin.apt:
+    name:
+      - cmake
+      - pkg-config
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxcb-xfixes0-dev
+      - libxkbcommon-dev
+      - python3
+    state: present
+    update_cache: true
+  become: true
+
+- name: install
+  ansible.builtin.command: ~/.cargo/bin/cargo install alacritty
+  register: install
+  changed_when: install.rc == 0

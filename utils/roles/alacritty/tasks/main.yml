@@ -1,0 +1,10 @@
+---
+- name: check installed
+  ansible.builtin.command: alacritty -V
+  register: version
+  changed_when: false
+  failed_when: false
+
+- name: install
+  include_tasks: install.yml
+  when: version.rc != 0

@@ -1,0 +1,9 @@
+---
+- name: download and unzip
+  when: version.rc != 0
+  ansible.builtin.unarchive:
+    remote_src: true
+    src: "{{ golang_url }}"
+    dest: /usr/local
+    mode: 0755
+  become: true

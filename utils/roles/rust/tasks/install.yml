@@ -1,0 +1,22 @@
+---
+- name: create tmp dir
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: install
+  register: tmp_dir
+
+- name: download installer
+  ansible.builtin.get_url:
+    url: https://sh.rustup.rs
+    dest: "{{ tmp_dir.path + '/rust-init' }}"
+    mode: 0755
+
+- name: install
+  ansible.builtin.command: "{{ tmp_dir.path + '/rust-init -y' }}"
+  register: install
+  changed_when: install.rc == 0
+
+- name: cleanup
+  ansible.builtin.file:
+    path: "{{ tmp_dir.path }}"
+    state: absent
