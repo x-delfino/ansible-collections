@@ -13,7 +13,7 @@ collection of various security tools. more to come...
 | Role | Function |
 |------|----------|
 | x\_delfino.security.gobuster| Installs [Gobuster](https://github.com/OJ/gobuster) |
-| x\_delfino.security.impacket| Install [Impacket])https://github.com/SecureAuthCorp/impacket) |
+| x\_delfino.security.impacket| Install [Impacket](https://github.com/SecureAuthCorp/impacket) |
 | x\_delfino.security.pyftpdlib| Installs [pyftpdlib](https://pypi.org/project/pyftpdlib/) |
 | x\_delfino.security.rlwrap| Installs [rlwrap](https://github.com/hanslub42/rlwrap) |
 | x\_delfino.security.scoutsuite| Installs [ScoutSuite](https://github.com/nccgroup/ScoutSuite) |
