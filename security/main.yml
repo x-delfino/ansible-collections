@@ -1,0 +1,10 @@
+---
+- hosts: all
+  roles:
+    - gobuster
+    - impacket
+    - pyftpdlib
+    - rlwrap
+    - scoutsuite
+    - trufflehog
+    - updog

@@ -1,0 +1,7 @@
+---
+- name: install
+  ansible.builtin.apt:
+    name: rlwrap
+    state: present
+    update_cache: true
+  become: true

@@ -1,0 +1,3 @@
+# Ansible Collection - x_delfino.security
+
+collection of security tools. more to come...

@@ -1,0 +1,25 @@
+---
+- name: create temp dir
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: install
+  register: tmp_dir
+
+- name: get repo
+  ansible.builtin.git:
+    repo: https://github.com/trufflesecurity/trufflehog
+    dest: "{{ tmp_dir.path + '/trufflehog/'}}"
+    version: 4d3c2d70e5a431a632324ec595d010dd1c8136e3
+
+- name: install
+  ansible.builtin.command: /usr/local/go/bin/go install
+  args:
+    chdir: "{{ tmp_dir.path + '/trufflehog' }}"
+  register: install
+  changed_when: install.rc == 0
+
+- name: cleanup
+  ansible.builtin.file:
+    path: "{{ tmp_dir.path }}"
+    state: absent
+  when: tmp_dir.path is defined

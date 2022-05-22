@@ -1,0 +1,10 @@
+---
+- name: check if installed
+  ansible.builtin.command: "{{ go_path + '/trufflehog --version' }}"
+  register: version
+  changed_when: false
+  failed_when: false
+
+- name: install
+  import_tasks: install.yml
+  when: version.rc != 0
