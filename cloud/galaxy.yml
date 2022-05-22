@@ -1,7 +1,7 @@
 ---
 namespace: x_delfino
 name: cloud
-version: 0.0.1
+version: 0.0.2
 description: collection of cloud tools
 tags: []
 authors: delfino
