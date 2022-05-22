@@ -1,8 +1,8 @@
 ---
 namespace: x_delfino
-name: utils
-version: 0.0.6
-description: collection of utils
+name: jobs
+version: 0.0.1
+description: collection of jobs
 tags: []
 authors: delfino
 
@@ -15,7 +15,7 @@ dependencies: {}
 
 repository: https://github.com/x-delfino/ansible-collections
 documentation: https://github.com/x-delfino/ansible-collections
-homepage: https://github.com/x-delfino/ansible-collections
+homepage: https://github.com/x-delfino/
 issues: https://github.com/x-delfino/ansible-collections/issues
 
 build_ignore: []

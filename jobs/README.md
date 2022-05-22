@@ -1,0 +1,3 @@
+# Ansible Collection - x_delfino.jobs
+
+collection of various jobs. more to come...
