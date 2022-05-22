@@ -16,6 +16,3 @@ collection of various security tools. more to come...
 | x\_delfino.utils.vagrant\_base| Sets [Vagrant Base Box](https://www.vagrantup.com/docs/boxes/base) configuration |
 | x\_delfino.utils.vagrant\_ssh| Sets [Vagrant insecure SSH key](https://github.com/hashicorp/vagrant/tree/master/keys) sets `UseDNS no` |
 | x\_delfino.utils.vagrant\_sudo| Sets [Vagrant insecure Sudo](https://www.vagrantup.com/docs/boxes/base) |
-
-
-## Included Playbooks:
