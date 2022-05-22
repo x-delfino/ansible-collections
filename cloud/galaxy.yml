@@ -1,7 +1,7 @@
 ---
 namespace: x_delfino
 name: cloud
-version: 0.0.2
+version: 0.0.4
 description: collection of cloud tools
 tags: []
 authors: delfino
@@ -13,9 +13,9 @@ license_file: ''
 
 dependencies: {}
 
-repository: https://github.com/x-delfino/ansible-collections
-documentation: https://github.com/x-delfino/ansible-collections
-homepage: https://github.com/x-delfino/
+repository: https://github.com/x-delfino/ansible-collections/tree/main/cloud
+documentation: https://github.com/x-delfino/ansible-collections/tree/main/cloud
+homepage: https://github.com/x-delfino/ansible-collections
 issues: https://github.com/x-delfino/ansible-collections/issues
 
 build_ignore: []

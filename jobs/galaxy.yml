@@ -1,7 +1,7 @@
 ---
 namespace: x_delfino
 name: jobs
-version: 0.0.1
+version: 0.0.2
 description: collection of jobs
 tags: []
 authors: delfino
@@ -13,9 +13,9 @@ license_file: ''
 
 dependencies: {}
 
-repository: https://github.com/x-delfino/ansible-collections
-documentation: https://github.com/x-delfino/ansible-collections
-homepage: https://github.com/x-delfino/
+repository: https://github.com/x-delfino/ansible-collections/tree/main/jobs
+documentation: https://github.com/x-delfino/ansible-collections/tree/main/jobs
+homepage: https://github.com/x-delfino/ansible-collections
 issues: https://github.com/x-delfino/ansible-collections/issues
 
 build_ignore: []

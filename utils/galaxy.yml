@@ -1,7 +1,7 @@
 ---
 namespace: x_delfino
 name: utils
-version: 0.0.7
+version: 0.0.8
 description: collection of utils
 tags: []
 authors: delfino
@@ -13,8 +13,8 @@ license_file: ''
 
 dependencies: {}
 
-repository: https://github.com/x-delfino/ansible-collections
-documentation: https://github.com/x-delfino/ansible-collections
+repository: https://github.com/x-delfino/ansible-collections/tree/main/utils
+documentation: https://github.com/x-delfino/ansible-collections/tree/main/utils
 homepage: https://github.com/x-delfino/ansible-collections
 issues: https://github.com/x-delfino/ansible-collections/issues
 
