@@ -12,8 +12,7 @@
       dd
       if=/dev/zero
       "{{ 'of=' + root_tmp.path }}"
-      bs=1M
-      count=$(($(df --sync -k / --output=avail | tail -n1) - 1));
+      bs=1M;
       rm
       -rf
       "{{ root_tmp.path }}"
@@ -34,8 +33,7 @@
       dd
       if=/dev/zero
       "{{ 'of=' + boot_tmp.path }}"
-      bs=1M
-      count=$(($(df --sync -k /boot --output=avail | tail -n1) - 1));
+      bs=1M;
       rm
       -rf
       "{{ boot_tmp.path }}"
