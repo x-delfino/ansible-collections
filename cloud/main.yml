@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+    - azure_cli
+    - ps_az

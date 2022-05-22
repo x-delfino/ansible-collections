@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: delfino
+  description: azure powershell module
+
+  license: GPL-2.0-or-later
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions: all
+    - name: GenericLinux
+      versions: all
+
+  galaxy_tags: []
+
+dependencies:
+  - x_delfino.utils.powershell
