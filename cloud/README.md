@@ -13,4 +13,4 @@ collection of various cloud tools. more to come...
 
 | Playbook | Function | Variables |
 | -------- | -------- | --------- |
-| all      | Install all roles | `target` to set hosts (default: all) |
+| x_delfino.cloud.all      | Install all roles | `target` to set hosts (default: all) |
