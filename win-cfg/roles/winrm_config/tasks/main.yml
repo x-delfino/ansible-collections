@@ -1,5 +1,6 @@
 ---
 - name: quick config
+  when: winrm_quickconfig
   ansible.windows.win_command: .\winrm.cmd quickconfig -q
   args:
     chdir: c:\windows\system32
@@ -10,7 +11,7 @@
 
 - name: set max memory per shell
   ansible.windows.win_command: |
-    .\winrm.cmd set winrm/config/winrs @{MaxMemoryPerShellMB="512"}
+    winrm.cmd set winrm/config/winrs @{MaxMemoryPerShellMB="512"}
   args:
     chdir: c:\windows\system32
   register: winrm_maxmemory
@@ -18,7 +19,7 @@
 - name: set max timeout
   ansible.windows.win_command: >
     "{{
-      '.\winrm.cmd set winrm/config @{MaxTimeoutms=\"' +
+      'winrm.cmd set winrm/config @{MaxTimeoutms=\"' +
     winrm_timeout +
     '\"}'
     }}"
@@ -27,15 +28,17 @@
   register: winrm_maxtimeout
 
 - name: set allow unencrypted
+  when: winrm_unencrypted
   ansible.windows.win_command: |
-    .\winrm.cmd set winrm/config/service @{AllowUnencrypted="true"}
+    winrm.cmd set winrm/config/service @{AllowUnencrypted="true"}
   args:
     chdir: c:\windows\system32
   register: winrm_unencrypted
 
 - name: set basic auth
+  when: winrm_basicauth
   ansible.windows.win_command: |
-    .\winrm.cmd set winrm/config/service/auth @{Basic="true"}
+    winrm.cmd set winrm/config/service/auth @{Basic="true"}
   args:
     chdir: c:\windows\system32
   register: winrm_basicauth

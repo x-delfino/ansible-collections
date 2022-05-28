@@ -1,3 +1,4 @@
 ---
 winrm_max_mem: "512"
 winrm_timeout: "1800000"
+winrm_quickconfig: true
