@@ -1,6 +1,6 @@
 ---
 namespace: x_delfino
-name: win-cfg
+name: win_cfg
 version: 0.0.1
 description: collection of windows configurations
 tags: []
