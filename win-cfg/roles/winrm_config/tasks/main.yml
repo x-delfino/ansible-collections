@@ -4,6 +4,9 @@
   args:
     chdir: c:\windows\system32
   register: winrm_quickconfig
+  changed_when: >
+    winrm_quickconfig.stdout_lines[0] !=
+    "WinRM service is already running on this machine."
 
 - name: set max memory per shell
   ansible.windows.win_command: |
@@ -14,7 +17,7 @@
 
 - name: set max timeout
   ansible.windows.win_command: |
-    .\winrm.cmd set winrm/config @{MaxTimeoutms="1800000"}
+    "{{ '.\winrm.cmd set winrm/config @{MaxTimeoutms=\"' + winrm_timeout + '\"}' }}"
   args:
     chdir: c:\windows\system32
   register: winrm_maxtimeout
