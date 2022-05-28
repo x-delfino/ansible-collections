@@ -1,0 +1,12 @@
+---
+- name: check if installed
+  ansible.builtin.file:
+    path: /usr/lib/parallels-tools/version
+    state: file
+  register: installed
+  failed_when: false
+  changed_when: false
+
+- name: install
+  import_tasks: install_linux.yml
+  when: installed.state == 'absent'
