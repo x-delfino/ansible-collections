@@ -1,0 +1,4 @@
+---
+- name: quick config
+  ansible.windows.win_shell: winrm quickconfig -q
+  register: quickconfig
