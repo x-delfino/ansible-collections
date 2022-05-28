@@ -18,11 +18,8 @@
 
 - name: set max timeout
   ansible.windows.win_command: >
-    "{{
-      'winrm.cmd set winrm/config @{MaxTimeoutms=\"' +
-    winrm_timeout +
-    '\"}'
-    }}"
+    winrm.cmd set winrm/config
+    "{{ @{MaxTimeoutms=\"' + winrm_timeout + '\"}' }}"
   args:
     chdir: c:\windows\system32
   register: winrm_maxtimeout
