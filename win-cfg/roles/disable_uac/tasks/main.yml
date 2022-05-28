@@ -1,4 +1,9 @@
 ---
-- name: configure for Linux
-  include_tasks: linux.yml
-  when: ansible_system == "Linux"
+- name: disable UAC
+  ansible.windows.win_regedit:
+    path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System
+    name: EnableLUA
+    data: 0
+    type: dword
+    state: present
+  become: true
