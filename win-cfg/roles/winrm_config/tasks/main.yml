@@ -10,8 +10,9 @@
     "WinRM service is already running on this machine."
 
 - name: set max memory per shell
-  ansible.windows.win_command: |
-    winrm.cmd set winrm/config/winrs @{MaxMemoryPerShellMB="512"}
+  ansible.windows.win_command: >
+    winrm.cmd set winrm/config/winrs
+    "{{ @{MaxMemoryPerShellMB=\"' + winrm_maxmem + '\"}' }}"
   args:
     chdir: c:\windows\system32
   register: winrm_maxmemory
