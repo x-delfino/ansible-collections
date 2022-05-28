@@ -1,5 +1,6 @@
 ---
 - name: check if installed
+  when: ansible_system == 'Linux'
   ansible.builtin.file:
     path: /usr/lib/parallels-tools/version
     state: file
@@ -8,5 +9,5 @@
   changed_when: false
 
 - name: install
-  import_tasks: install.yml
+  import_tasks: install_linux.yml
   when: installed.state == 'absent'
