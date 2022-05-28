@@ -1,6 +1,6 @@
 ---
 - name: install
-  ansible.windows.powershell:
+  ansible.windows.win_powershell:
     script: >
       Add-WindowsCapability -Online -Name
       (Get-WindowsCapability -Online |
