@@ -1,27 +1,4 @@
 ---
-- name: ensure ~/.ssh/
-  ansible.builtin.file:
-    path: ~/.ssh
-    state: directory
-    mode: '700'
-    owner: vagrant
-    group: vagrant
-
-- name: Download vagrant ssh key
-  ansible.builtin.get_url:
-    url: "{{ vagrant_key_url }}"
-    owner: vagrant
-    group: vagrant
-    mode: '644'
-    dest: ~/.ssh/authorized_keys
-
-- name: set "UseDNS no"
-  ansible.builtin.lineinfile:
-    dest: /etc/ssh/sshd_config
-    regexp: '.*UseDNS.*'
-    line: 'UseDNS no'
-    insertbefore: BOF
-    backup: true
-  notify:
-    - restart sshd
-  become: true
+- name: configure for Linux
+  include_tasks: configure.yml
+  when: ansible_system == "Linux"

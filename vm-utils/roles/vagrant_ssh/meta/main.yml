@@ -1,4 +1,18 @@
 ---
-- name: configure for Linux
-  include_tasks: configure.yml
-  when: ansible_system == "Linux"
+galaxy_info:
+  author: delfino
+  description: vagrant insecure ssh configuration
+
+  license: GPL-2.0-or-later
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions: all
+    - name: GenericLinux
+      versions: all
+
+  galaxy_tags: []
+
+dependencies: []
