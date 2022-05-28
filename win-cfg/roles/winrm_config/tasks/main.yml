@@ -2,3 +2,4 @@
 - name: quick config
   ansible.windows.win_shell: winrm quickconfig -q
   register: quickconfig
+  changed_when: quickconfig.stdout_lines.first == "WinRM service is already running on this machine."
