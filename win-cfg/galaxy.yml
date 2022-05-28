@@ -1,0 +1,21 @@
+---
+namespace: x_delfino
+name: win-cfg
+version: 0.0.1
+description: collection of windows configurations
+tags: []
+authors: delfino
+
+readme: README.md
+license:
+  - GPL-2.0-or-later
+license_file: ''
+
+dependencies: {}
+
+repository: https://github.com/x-delfino/ansible-collections/tree/main/win-cfg
+documentation: https://github.com/x-delfino/ansible-collections/tree/main/win-cfg
+homepage: https://github.com/x-delfino/ansible-collections
+issues: https://github.com/x-delfino/ansible-vm-utils/issues
+
+build_ignore: []

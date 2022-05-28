@@ -2,7 +2,7 @@
 
 [![x\_delfino.vm\_utils](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=galaxy&prefix=v&query=%24.latest_version.version&url=https%3A%2F%2Fgalaxy.ansible.com%2Fapi%2Fv2%2Fcollections%2Fx_delfino%2Fvm_utils%2F)](https://galaxy.ansible.com/x_delfino/vm_utils)
 
-collection of various security tools. more to come...
+collection of various virtual machine utilities. more to come...
 
 ## Tested on:
 - Debian 11.3.0 ARM64
