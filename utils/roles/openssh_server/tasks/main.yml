@@ -1,0 +1,4 @@
+---
+- name: install
+  when: ansible_system = 'Win32NT'
+  include_tasks: windows.yml

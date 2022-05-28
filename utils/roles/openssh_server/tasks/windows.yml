@@ -1,0 +1,8 @@
+---
+- name: install
+  ansible.windows.powershell:
+    script: >
+      Add-WindowsCapability -Online -Name
+      (Get-WindowsCapability -Online |
+      Where-Object Name -like 'OpenSSH.Server*').name
+  register: install
