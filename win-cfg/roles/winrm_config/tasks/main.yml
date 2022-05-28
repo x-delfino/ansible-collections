@@ -12,7 +12,7 @@
 - name: set max memory per shell
   ansible.windows.win_command: >
     winrm.cmd set winrm/config/winrs
-    "{{ @{MaxMemoryPerShellMB=\"' + winrm_maxmem + '\"}' }}"
+    "{{ '@{MaxMemoryPerShellMB=\"' + winrm_maxmem + '\"}' }}"
   args:
     chdir: c:\windows\system32
   register: winrm_maxmemory
@@ -20,7 +20,7 @@
 - name: set max timeout
   ansible.windows.win_command: >
     winrm.cmd set winrm/config
-    "{{ @{MaxTimeoutms=\"' + winrm_timeout + '\"}' }}"
+    "{{ '@{MaxTimeoutms=\"' + winrm_timeout + '\"}' }}"
   args:
     chdir: c:\windows\system32
   register: winrm_maxtimeout
