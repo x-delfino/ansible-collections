@@ -12,7 +12,6 @@
     - nnn
     - ohmyzsh
     - python3_9_venv
-    - rust_analyzer
     - tmux
     - tmuxp
     - tpm
@@ -31,3 +30,4 @@
     - powershell
     - ps_script_analyzer
     - rust
+    - rust_analyzer
