@@ -1,0 +1,10 @@
+---
+- name: check if installed
+  ansible.builtin.command: ~/.cargo/bin/rustc --version
+  register: version
+  failed_when: false
+  changed_when: false
+
+- name: install
+  import_tasks: install.yml
+  when: version.rc != 0

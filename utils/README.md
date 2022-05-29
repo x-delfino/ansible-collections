@@ -1,4 +1,5 @@
 [windows-10+]: https://img.shields.io/badge/Windows-10%2B-00A4EF?logo=windows&logoColor=white
+[macos-12+]: https://img.shields.io/badge/macOS-12%2B-black?logo=apple&logoColor=white
 [debian-11]: https://img.shields.io/badge/Debian-11.3-DD1155?logo=debian&logoColor=white
 [kali-2022]: https://img.shields.io/badge/Kali-2022.1-367bf0?logo=kali-linux&logoColor=white
 [ubuntu-20.04]: https://img.shields.io/badge/Ubuntu-20.04-E95420?logo=ubuntu&logoColor=white
