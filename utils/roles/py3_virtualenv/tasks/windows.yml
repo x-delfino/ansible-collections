@@ -3,5 +3,5 @@
   ansible.windows.win_command: pip3 install virtualenv --no-input
   register: install
   changed_when: >
-    install.stdout_lines[0] is
-    !match("Requirement already satisfied{{':'}} virtualenv*")
+    install.stdout_lines[0] is not
+    match("Requirement already satisfied{{':'}} virtualenv*")
