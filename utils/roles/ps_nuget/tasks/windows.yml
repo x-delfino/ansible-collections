@@ -3,6 +3,7 @@
   ansible.windows.win_powershell:
     script: |
       Get-PackageProvider NuGet -ListAvailable -ErrorAction Ignore
+  changed_when: false
   register: provider
 
 - name: install
@@ -10,3 +11,5 @@
   ansible.windows.win_powershell:
     script: |
       Install-PackageProvider NuGet -Force
+  register: install
+  changed_when: install.host_err == ""

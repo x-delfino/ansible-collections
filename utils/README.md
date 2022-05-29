@@ -22,12 +22,13 @@ collection of various utilities. more to come...
 | x\_delfino.utils.curl| Installs [curl](https://curl.se/) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.git| Installs [git](https://git-scm.com/) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.golang| Installs [Go](https://go.dev/) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.neovim| Installs [Neovim](https://neovim.io/) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.neovim| Installs [Neovim](https://neovim.io/) | ![debian-11] ![kali-2022] ![windows-10+]|
 | x\_delfino.utils.nnn| Installs [nnn(_n³_)](https://github.com/jarun/nnn) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.ohmyzsh| Installs [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.openssh\_server| Installs [OpenSSH Server](https://www.openssh.com/) | ![windows-10+] |
 | x\_delfino.utils.powershell| Installs [PowerShell](https://github.com/PowerShell/PowerShell) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.ps\_script\_analyzer| Installs [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.ps\_nuget| Installs [PowerShell NuGet Provider](https://docs.microsoft.com/en-us/nuget/reference/powershell-reference) | ![windows-10+] |
+| x\_delfino.utils.ps\_script\_analyzer| Installs [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) | ![debian-11] ![kali-2022] ![windows-10+] |
 | x\_delfino.utils.python3\_9\_venv| Installs [Python 3.9 venv](https://docs.python.org/3/library/venv.html) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.rust| Installs [Rust](https://www.rust-lang.org/) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.rust\_analyzer| Installs [rust-analyzer](https://github.com/rust-lang/rust-analyzer) | ![debian-11] ![kali-2022] |
