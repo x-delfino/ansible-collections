@@ -19,11 +19,11 @@ collection of various utilities. more to come...
 
 | Role | Function | Tested On |
 |------|----------|-----------|
-| x\_delfino.utils.alacritty| Installs [Alacritty](https://github.com/alacritty/alacritty) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.curl| Installs [curl](https://curl.se/) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.git| Installs [git](https://git-scm.com/) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.alacritty| Installs [Alacritty](https://github.com/alacritty/alacritty) | [![alacritty](https://img.shields.io/chocolatey/v/alacritty?color=80B5E3&label=choco&logo=chocolatey&logoColor=white)](https://community.chocolatey.org/packages/alacritty) [![alacritty](https://img.shields.io/crates/v/alacritty?color=2e572a&logo=rust)](https://crates.io/crates/alacritty) |
+| x\_delfino.utils.curl| Installs [curl](https://curl.se/) | [![curl](https://img.shields.io/debian/v/curl/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/curl) |
+| x\_delfino.utils.git| Installs [git](https://git-scm.com/) | [![git](https://img.shields.io/debian/v/git/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/git) |
 | x\_delfino.utils.golang| Installs [Go](https://go.dev/) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.neovim| Installs [Neovim](https://neovim.io/) | ![debian-11] ![kali-2022] ![windows-10+] |
+| x\_delfino.utils.neovim| Installs [Neovim](https://neovim.io/) | [![neovim](https://img.shields.io/debian/v/neovim/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/neovim) [![neovim](https://img.shields.io/chocolatey/v/neovim?color=80B5E3&label=choco&logo=chocolatey&logoColor=white)](https://community.chocolatey.org/packages/neovim) |
 | x\_delfino.utils.nnn| Installs [nnn(_n³_)](https://github.com/jarun/nnn) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.ohmyzsh| Installs [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.openssh\_server| Installs [OpenSSH Server](https://www.openssh.com/) | ![windows-10+] |
@@ -31,17 +31,17 @@ collection of various utilities. more to come...
 | x\_delfino.utils.ps\_nuget| Installs [PowerShell NuGet Provider](https://docs.microsoft.com/en-us/nuget/reference/powershell-reference) | ![windows-10+] |
 | x\_delfino.utils.ps\_script\_analyzer| Installs [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) | [![PSScriptAnalyzer](https://img.shields.io/powershellgallery/v/PSScriptAnalyzer?color=012456&label=gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/PSScriptAnalyzer) |
 | x\_delfino.utils.py3\_virtualenv| Installs [Python 3 venv](https://docs.python.org/3/library/venv.html) | [![virtualenv](https://img.shields.io/pypi/v/virtualenv?logo=pypi&logoColor=white)](https://pypi.org/project/virtualenv/) |
-| x\_delfino.utils.python3| Installs [Python 3](https://www.python.org/) | ![windows-10+] |
-| x\_delfino.utils.rust| Installs [Rust](https://www.rust-lang.org/) | ![debian-11] ![kali-2022] ![windows-10+] |
-| x\_delfino.utils.rust\_analyzer| Installs [rust-analyzer](https://github.com/rust-lang/rust-analyzer) | ![debian-11] ![kali-2022] ![windows-10+] |
-| x\_delfino.utils.tmux| Installs [tmux](https://github.com/tmux/tmux/wiki) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.tmuxp| Installs [tmuxp](https://github.com/tmux-python/tmuxp) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.python3| Installs [Python 3](https://www.python.org/) | [![python3](https://img.shields.io/chocolatey/v/python?color=80B5E3&label=choco&logo=chocolatey&logoColor=white)](https://community.chocolatey.org/packages/python) |
+| x\_delfino.utils.rust| Installs [Rust](https://www.rust-lang.org/) | ![debian-11] ![kali-2022] [![rust](https://img.shields.io/chocolatey/v/rust?color=80B5E3&label=choco&logo=chocolatey&logoColor=white)](https://community.chocolatey.org/packages/rust) |
+| x\_delfino.utils.rust\_analyzer| Installs [rust-analyzer](https://github.com/rust-lang/rust-analyzer) | ![debian-11] ![kali-2022] [![rust](https://img.shields.io/chocolatey/v/rust-analyzer?color=80B5E3&label=choco&logo=chocolatey&logoColor=white)](https://community.chocolatey.org/packages/rust-analyzer) |
+| x\_delfino.utils.tmux| Installs [tmux](https://github.com/tmux/tmux/wiki) | [![tmux](https://img.shields.io/debian/v/tmux/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/tmux) |
+| x\_delfino.utils.tmuxp| Installs [tmuxp](https://github.com/tmux-python/tmuxp) | [![tmuxp](https://img.shields.io/debian/v/tmuxp/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/tmuxp) |
 | x\_delfino.utils.tpm| Installs [tpm](https://github.com/tmux-plugins/tpm) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.unzip| Installs [unzip](https://linux.die.net/man/1/unzip) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.unzip| Installs [unzip](https://linux.die.net/man/1/unzip) | [![unzip](https://img.shields.io/debian/v/unzip/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/unzip) |
 | x\_delfino.utils.vim\_plug| Installs [vim-plug](https://github.com/junegunn/vim-plug) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.wget| Installs [wget](https://www.gnu.org/software/wget/) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.zip| Installs [zip](https://linux.die.net/man/1/zip) | ![debian-11] ![kali-2022] |
-| x\_delfino.utils.zsh| Installs [zsh](https://www.zsh.org/) | ![debian-11] ![kali-2022] |
+| x\_delfino.utils.wget| Installs [wget](https://www.gnu.org/software/wget/) | [![wget](https://img.shields.io/debian/v/wget/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/wget) |
+| x\_delfino.utils.zip| Installs [zip](https://linux.die.net/man/1/zip) | [![zip](https://img.shields.io/debian/v/zip/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/zip) |
+| x\_delfino.utils.zsh| Installs [zsh](https://www.zsh.org/) | [![zsh](https://img.shields.io/debian/v/zsh/stable?color=DD1155&logo=debian)](https://packages.debian.org/stable/zsh) |
 
 ## Included Playbooks:
 
