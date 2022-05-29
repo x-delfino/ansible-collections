@@ -1,0 +1,13 @@
+---
+- name: check installed
+  ansible.windows.win_powershell:
+    script: |
+      Get-Module Az -ListAvailable
+  register: module
+  changed_when: false
+
+- name: install
+  when: module.output == ""
+  ansible.windows.win_powershell:
+    script: |
+      Install-Module Az -Force

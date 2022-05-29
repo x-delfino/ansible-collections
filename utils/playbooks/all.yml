@@ -9,27 +9,27 @@
 
 - hosts: "{{ 'os_linux:&' + target|default('all')}}"
   roles:
-    - curl
-    - nnn
-    - ohmyzsh
-    - tmux
-    - tmuxp
-    - tpm
-    - unzip
-    - vim_plug
-    - wget
-    - zip
-    - zsh
+    - x_delfino.utils.curl
+    - x_delfino.utils.nnn
+    - x_delfino.utils.ohmyzsh
+    - x_delfino.utils.tmux
+    - x_delfino.utils.tmuxp
+    - x_delfino.utils.tpm
+    - x_delfino.utils.unzip
+    - x_delfino.utils.vim_plug
+    - x_delfino.utils.wget
+    - x_delfino.utils.zip
+    - x_delfino.utils.zsh
 
 - hosts: "{{target|default('all')}}"
   roles:
-    - alacritty
-    - git
-    - golang
-    - neovim
-    - powershell
-    - ps_script_analyzer
-    - py3_virtualenv
-    - python3
-    - rust
-    - rust_analyzer
+    - x_delfino.utils.alacritty
+    - x_delfino.utils.git
+    - x_delfino.utils.golang
+    - x_delfino.utils.neovim
+    - x_delfino.utils.powershell
+    - x_delfino.utils.ps_script_analyzer
+    - x_delfino.utils.py3_virtualenv
+    - x_delfino.utils.python3
+    - x_delfino.utils.rust
+    - x_delfino.utils.rust_analyzer
