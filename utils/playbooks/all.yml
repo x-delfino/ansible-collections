@@ -28,7 +28,7 @@
     - neovim
     - powershell
     - ps_script_analyzer
-    - py3_virutalenv
+    - py3_virtualenv
     - python3
     - rust
     - rust_analyzer
