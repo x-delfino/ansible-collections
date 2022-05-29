@@ -1,0 +1,12 @@
+---
+- name: check installed
+  ansible.windows.win_powershell:
+    script: |
+      Get-PackageProvider NuGet -ListAvailable
+  register: provider
+
+- name: install
+  when: provider.host_err != ""
+  ansible.windows.win_powershell:
+    script: |
+      Install-PackageProvider NuGet -Force

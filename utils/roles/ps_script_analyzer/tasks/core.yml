@@ -1,7 +1,7 @@
 ---
 - name: check installed
   ansible.builtin.command:
-    cmd: "pwsh -nop -noni -c '(get-module PSScriptAnalyzer -ListAvailable)'"
+    cmd: "pwsh -nop -noni -c 'Get-Module PSScriptAnalyzer -ListAvailable'"
   register: module
   changed_when: false
   failed_when: false
@@ -9,4 +9,4 @@
 - name: install
   when: module.stdout == ""
   ansible.builtin.command:
-    cmd: "pwsh -nop -noni -c 'install-module PSScriptAnalyzer -Force'"
+    cmd: "pwsh -nop -noni -c 'Install-Module PSScriptAnalyzer -Force'"

@@ -1,0 +1,12 @@
+---
+- name: check installed
+  ansible.builtin.command:
+    cmd: "pwsh -nop -noni -c 'Get-PackageProvider NuGet -ListAvailable'"
+  register: module
+  changed_when: false
+  failed_when: false
+
+- name: install
+  when: module.rc != 0
+  ansible.builtin.command:
+    cmd: "pwsh -nop -noni -c 'Get-PackageProvider NuGet -Force'"
