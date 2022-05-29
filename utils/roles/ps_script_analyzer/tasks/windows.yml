@@ -1,0 +1,6 @@
+---
+- name: check installed
+  ansible.windows.win_powershell:
+    script: |
+      Get-Module PSScriptAnalyzer -ListAvailable
+  register: installed
