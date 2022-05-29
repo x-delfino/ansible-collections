@@ -29,5 +29,6 @@
     - neovim
     - powershell
     - ps_script_analyzer
+    - python
     - rust
     - rust_analyzer
