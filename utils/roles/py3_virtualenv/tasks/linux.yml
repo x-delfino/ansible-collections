@@ -1,0 +1,6 @@
+---
+- name: install
+  ansible.builtin.pip:
+    name: virtualenv
+    state: present
+    executable: pip3

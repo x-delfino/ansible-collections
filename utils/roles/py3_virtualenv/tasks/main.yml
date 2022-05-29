@@ -1,6 +1,8 @@
 ---
-- name: install
-  ansible.builtin.pip:
-    name: virtualenv
-    state: present
-    executable: pip3
+- name: apt install
+  when: ansible_system == 'Win32NT'
+  import_tasks: windows.yml
+
+- name: apt install
+  when: ansible_system == 'Linux'
+  import_tasks: linux.yml

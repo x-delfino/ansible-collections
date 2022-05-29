@@ -1,0 +1,4 @@
+---
+- name: install
+  ansible.windows.win_command: pip3 install virtualenv --no-input
+  register: install
