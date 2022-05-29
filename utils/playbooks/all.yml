@@ -1,11 +1,17 @@
 ---
-- hosts: "{{target|default('all')}}"
+- name: group hosts
+  hosts: all
+  tasks:
+    - name: group hosts depending on their OS type
+      ansible.builtin.group_by:
+        key: os_{{ ansible_system | lower }}
+
+- hosts: "{{ 'os_linux:&' + target|default('all')}}"
   roles:
     - alacritty
     - curl
     - git
     - golang
-    - neovim
     - nnn
     - ohmyzsh
     - powershell
@@ -21,3 +27,7 @@
     - wget
     - zip
     - zsh
+
+- hosts: "{{target|default('all')}}"
+  roles:
+    - neovim
