@@ -3,4 +3,10 @@
   ansible.windows.win_powershell:
     script: |
       Get-Module PSScriptAnalyzer -ListAvailable
-  register: installed
+  register: module
+
+- name: install
+  when: module.host_out == ""
+  ansible.windows.win_powershell:
+    script: |
+      Install PSScriptAnalyzer -Force
