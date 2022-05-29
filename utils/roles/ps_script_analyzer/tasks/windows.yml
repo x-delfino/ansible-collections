@@ -9,4 +9,4 @@
   when: module.host_out == ""
   ansible.windows.win_powershell:
     script: |
-      Install PSScriptAnalyzer -Force
+      Install-Module PSScriptAnalyzer -Force
