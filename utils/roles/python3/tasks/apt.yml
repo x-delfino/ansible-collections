@@ -1,0 +1,8 @@
+---
+- name: ensure python3 and pip are installed
+  ansible.builtin.apt:
+    name:
+      - python3
+    state: present
+    update_cache: true
+  become: true

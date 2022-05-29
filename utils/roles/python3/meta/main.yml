@@ -1,16 +1,14 @@
 ---
 galaxy_info:
   author: delfino
-  description: python3.9 venv
+  description: python3
 
   license: GPL-2.0-or-later
 
   min_ansible_version: 2.1
 
   platforms:
-    - name: Debian
-      versions: all
-    - name: GenericLinux
+    - name: Windows
       versions: all
 
   galaxy_tags: []
