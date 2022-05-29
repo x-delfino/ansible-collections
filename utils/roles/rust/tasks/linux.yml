@@ -6,5 +6,5 @@
   changed_when: false
 
 - name: install
-  import_tasks: install.yml
+  import_tasks: linux_install.yml
   when: version.rc != 0
