@@ -13,7 +13,6 @@
     - golang
     - nnn
     - ohmyzsh
-    - powershell
     - python3_9_venv
     - rust
     - rust_analyzer
@@ -28,6 +27,7 @@
 
 - hosts: "{{target|default('all')}}"
   roles:
-    - neovim
     - git
+    - neovim
+    - powershell
     - ps_script_analyzer
