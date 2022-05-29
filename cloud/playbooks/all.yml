@@ -1,5 +1,16 @@
 ---
+- name: group hosts
+  hosts: all
+  tasks:
+    - name: group hosts depending on their OS type
+      ansible.builtin.group_by:
+        key: os_{{ ansible_system | lower }}
+      changed_when: false
+
+- hosts: "{{ 'os_linux:&' + target|default('all')}}"
+  roles:
+    - x_delfino.cloud.azure_cli
+
 - hosts: "{{target|default('all')}}"
   roles:
-    - azure_cli
-    - ps_az
+    - x_delfino.cloud.ps_az
