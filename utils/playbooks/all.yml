@@ -10,12 +10,10 @@
   roles:
     - alacritty
     - curl
-    - git
     - golang
     - nnn
     - ohmyzsh
     - powershell
-    - ps_script_analyzer
     - python3_9_venv
     - rust
     - rust_analyzer
@@ -31,3 +29,5 @@
 - hosts: "{{target|default('all')}}"
   roles:
     - neovim
+    - git
+    - ps_script_analyzer
