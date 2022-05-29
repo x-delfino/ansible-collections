@@ -29,8 +29,8 @@ collection of various utilities. more to come...
 | x\_delfino.utils.openssh\_server| Installs [OpenSSH Server](https://www.openssh.com/) | ![windows-10+] |
 | x\_delfino.utils.powershell| Installs [PowerShell](https://github.com/PowerShell/PowerShell) | ![debian-11] ![kali-2022] |
 | x\_delfino.utils.ps\_nuget| Installs [PowerShell NuGet Provider](https://docs.microsoft.com/en-us/nuget/reference/powershell-reference) | ![windows-10+] |
-| x\_delfino.utils.ps\_script\_analyzer| Installs [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) | ![debian-11] ![kali-2022] ![windows-10+] |
-| x\_delfino.utils.py3\_virtualenv| Installs [Python 3 venv](https://docs.python.org/3/library/venv.html) | ![debian-11] ![kali-2022] ![windows-10+] |
+| x\_delfino.utils.ps\_script\_analyzer| Installs [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) | (https://www.powershellgallery.com/packages/PSScriptAnalyzer)[![https://img.shields.io/powershellgallery/v/PSScriptAnalyzer?color=012456&label=gallery&logo=powershell&logoColor=white]] |
+| x\_delfino.utils.py3\_virtualenv| Installs [Python 3 venv](https://docs.python.org/3/library/venv.html) | (https://pypi.org/project/virtualenv/)[![https://img.shields.io/pypi/v/virtualenv?logo=pypi&logoColor=white]] |
 | x\_delfino.utils.python3| Installs [Python 3](https://www.python.org/) | ![windows-10+] |
 | x\_delfino.utils.rust| Installs [Rust](https://www.rust-lang.org/) | ![debian-11] ![kali-2022] ![windows-10+] |
 | x\_delfino.utils.rust\_analyzer| Installs [rust-analyzer](https://github.com/rust-lang/rust-analyzer) | ![debian-11] ![kali-2022] ![windows-10+] |
