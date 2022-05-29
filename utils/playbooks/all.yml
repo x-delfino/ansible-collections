@@ -8,7 +8,6 @@
 
 - hosts: "{{ 'os_linux:&' + target|default('all')}}"
   roles:
-    - alacritty
     - curl
     - golang
     - nnn
@@ -26,6 +25,7 @@
 
 - hosts: "{{target|default('all')}}"
   roles:
+    - alacritty
     - git
     - neovim
     - powershell
