@@ -5,6 +5,7 @@
     - name: group hosts depending on their OS type
       ansible.builtin.group_by:
         key: os_{{ ansible_system | lower }}
+      changed_when: false
 
 - hosts: "{{ 'os_linux:&' + target|default('all')}}"
   roles:
