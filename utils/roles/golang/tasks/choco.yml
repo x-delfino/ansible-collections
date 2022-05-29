@@ -1,0 +1,5 @@
+---
+- name: install
+  chocolatey.chocolatey.win_chocolatey:
+    name: go
+    state: present
