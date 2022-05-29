@@ -9,7 +9,6 @@
 - hosts: "{{ 'os_linux:&' + target|default('all')}}"
   roles:
     - curl
-    - golang
     - nnn
     - ohmyzsh
     - python3_9_venv
@@ -27,6 +26,7 @@
   roles:
     - alacritty
     - git
+    - golang
     - neovim
     - powershell
     - ps_script_analyzer
