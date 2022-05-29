@@ -7,10 +7,7 @@
         key: os_{{ ansible_system | lower }}
       changed_when: false
 
-- hosts: "{{ 'os_linux:&' + target|default('all')}}"
-  roles:
-    - x_delfino.cloud.azure_cli
-
 - hosts: "{{target|default('all')}}"
   roles:
     - x_delfino.cloud.ps_az
+    - x_delfino.cloud.azure_cli
