@@ -7,7 +7,7 @@
   changed_when: false
 
 - name: install
-  when: module.output == ""
+  when: module.output == []
   ansible.windows.win_powershell:
     script: |
       Install-Module Az -Force
