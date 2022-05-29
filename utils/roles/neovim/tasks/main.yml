@@ -1,8 +1,4 @@
 ---
 - name: apt install
-  when: ansible_system == 'Win32NT'
-  import_tasks: choco.yml
-
-- name: apt install
   when: ansible_system == 'Linux'
   import_tasks: apt.yml
