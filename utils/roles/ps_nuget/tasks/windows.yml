@@ -7,7 +7,7 @@
   register: provider
 
 - name: install
-  when: provider.output[0].name != "NuGet"
+  when: provider.output[0].Name != "NuGet"
   ansible.windows.win_powershell:
     script: |
       Install-PackageProvider NuGet -Force
